@@ -5,4 +5,5 @@ services:
 before_install:
   - docker build -t angelgoez/weather-app -f Dockerfile.dev .
 
-  
+script:
+  - docker run angelgoez/weather-app npm run test -- --coverage
